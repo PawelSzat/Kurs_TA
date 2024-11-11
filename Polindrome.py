@@ -4,22 +4,22 @@
 3. wielkosci znaków
 4. uzycie interpunkcji
 """
-def is_polindrome(text):
+def is_polindrome(data):
     
-    assert all(znak.isalpha() or znak.isdigit() for znak in text), "Tekst zawiera niedozwolone znaki, uzyj tylko liter lub cyfr"
+    assert all(znak.isalpha() or znak.isdigit() for znak in data), "Tekst zawiera niedozwolone znaki, uzyj tylko liter lub cyfr"
     print("nie zaweira znakow spec")
-    if text.isalpha():
+    if data.isalpha():
         print("ciag tekstowy")
-    elif text.isdigit():
+    elif data.isdigit():
         print("ciag liczbowy")
     else:
         print("ciag mieszany") 
-    return text == text[::-1]
+    return data == data[::-1]
     
-text = input("Wprowadz polindrom:")
-assert text, "pole nie moze byc puste"
+data = input("Wprowadz polindrom:")
+assert data, "pole nie moze byc puste"
 
-if is_polindrome(text):
+if is_polindrome(data):
     print("to jest polindrom")
 else:
     print("to nie jest polindrom")
