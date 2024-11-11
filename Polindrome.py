@@ -1,8 +1,9 @@
 """
-1. wprowadzenie liczb po przecinku
+1. wprowadzenie znakow specjalnych
 2. wprowadzenie pustego pola
-3. wielkosci znaków
-4. uzycie interpunkcji
+3. wielkosci znakow
+4. wartosc zawierajaca tylko litery 
+5. wartosc zawierajaca tylko liczby
 """
 def is_polindrome(data):
     
