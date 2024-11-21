@@ -6,13 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 def search_on_ebay(selenium, search_term):
-    """
-    Wyszukaj podany termin na stronie eBay.
 
-    Args:
-      selenium: Obiekt sterownika Selenium.
-      search_term: Termin do wyszukania.
-    """
     search_field = WebDriverWait(selenium, 10).until(
         lambda s: s.find_element(By.NAME, "_nkw")
     )
@@ -22,13 +16,7 @@ def search_on_ebay(selenium, search_term):
 
 
 def verify_category_link(selenium, category_name):
-    """
-    Sprawdź, czy link do kategorii jest wyświetlany.
-
-    Args:
-      selenium: Obiekt sterownika Selenium.
-      category_name: Nazwa kategorii do wyszukania.
-    """
+   
     category_link = WebDriverWait(selenium, 10).until(
         lambda s: s.find_element(By.LINK_TEXT, category_name)
     )
@@ -36,9 +24,7 @@ def verify_category_link(selenium, category_name):
 
 
 def test_ebay_search(selenium):
-    """
-    Test wyszukiwania na stronie eBay.
-    """
+    
     selenium.get("https://www.ebay.pl/")
 
     search_on_ebay(selenium, "Laptop")
